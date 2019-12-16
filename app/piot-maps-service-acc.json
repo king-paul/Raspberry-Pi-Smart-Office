@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "piot-maps",
+  "private_key_id": "c3dfa69c840e5463066ce11f4a9bc55d7735aa16",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCcNlHI6fH4+/Pt\n1wCZthSdxMh7DD5sV+IzdCX9cNeauBcRNfLIS8rtI4C3Hkciki8qngji23fELuvi\nI5kyQEujaxuEMQAMOscYviPWhyNRKOjiH8cn5Ws3yzY9urrni+ajzshCjMYq4Efy\nPWEXYZKh0Zcf/EB3Ob9ZghiIi+k9LSIbCfVLrLvzRAMeWmcByRZyQbbG4sI+zMVY\nwchYTqs7ID8tesENvC44PglllyRvKNjbn68e+QhpnqIYS7nzOkZKqNo+FMlJCmSu\nfZvv7fH0FRM/L3/YqQqNT3J6ou+p2ozCl1nKkB0Ynfo3lraL3beZGICB3mwchyJS\nBn0ry9ijAgMBAAECggEARwWpXHwFAEtpJZ8ljj1LFUoFTnCMJw0z8mnh5d86n4UI\nM9J/3hIbooKMQHVbKTwmhq1QY/gddUxSAcBmpAK4gQWu/oSavXSx1a2JNL2/UGSV\nsU16akiz3SueryUpWiHwzFQ1F5DSfmb3PwsqDAvYM4tLtwaktrBCL+tmxRo7goy+\npELCiUHsD9Xu9v2IG0my5OxtgPjjyoHS5EIp5yDDzkecPRh9v+p9f+FzdRfwZTj/\nDKJT8UoZHCIcm0eenYiQX6ffP3eoJmAf+CnQNjr9LP2ZUk0sPiFP31REkysC7bUb\nl/qR8GJoyWpYt8oyD7l7GD+2GNnW1vnLq0iJVVKX1QKBgQDZd3D5EuSoqS3MHFBJ\nY28FF0z/lpyPlWLhZ74b+qn3VhYyExiphGFYMaKS6ycYUExG0nBuhOgMe2G25mle\nnB6U1efGDGx+g/DOUQukkq7HgvOCi7963wS06t0cDN2xSTxeIjHJceJe60zYwoyS\nNmgSpo7niI86cur0yqXa2sbQDwKBgQC35E1IME5oIjep6spnXKdHcD5Ad1qBluo3\nMYhX9qz9aaj917OhyPTbzgX5c+Z9zarg5sa2luVL7wj6+WsN95kUehDmbGzCgJrx\nq39f4phu9um+KylorIcGMf59N1eE84ryfSKmFn6XM+JRuCqofZ7k6yixrsyUD0CC\nJZ203wxaLQKBgAo9c5Zm61l9zehElQs/oWSt+jQ21Vx1flh62BrdLM+2wAjPmWOy\nFhtfCva8F/UvIsha9Gxf2cVssec45lFMLKx5fhZ3U0yJzfcJHfE77vr6EZleF0Aj\n7EbQoGTHvlCw0CTmm02PDUfG8LFsR85CvZfTO/tvFL991c59FF4/2wjFAoGBAJx7\nyYvpl38jxwxwAScuACdZi4/eQQVPwCWRn/2CqzjGJglE+dZtpHg7fHgHOZfKYWQa\n3fRYue0BDzpK7t+m1/xF14XNtEtblv6aOr0EnUSoFsY+AnHRhuEtv+scIfzAJngt\nJkQBll3ix+9UcfCJXaJdvnZdUjeYNwPJMMfOmrtNAoGBAM89b4bgEcxsJ+EKiYnO\nnXRhhQTpmhyMoLUgi0tLev0NveOteN2zU4nu+d6ikLX3zCHxrylDIwcHqE1YZlOu\nw1LM4aifgV1Wa7s1jqC86HSp659o2oNYX/EatVJhkPdQlW0oNjZWEtlX8fzs3UPw\n0XeWtseD4bl7R/x705NyyJKG\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-calendar@piot-maps.iam.gserviceaccount.com",
+  "client_id": "107663222576417130085",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-calendar%40piot-maps.iam.gserviceaccount.com"
+}

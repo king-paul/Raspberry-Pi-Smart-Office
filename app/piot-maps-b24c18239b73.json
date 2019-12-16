@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "piot-maps",
+  "private_key_id": "b24c18239b737e3d694c6576e6e778ba0beceecf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCyhGS/lmw7JBxC\nmbK+wM7YVDJsw6i35yqZI1snKAra6CfwlfpsxPd8Aw7XaP8/+m5ce8bik/d2pbRH\nWAyyV1OeEuegddR4VnPuynkmhSh6IG+Z0ceg1JDwwz6mlHV08q9s4EmXWwHQOlxc\n1Q1U7LYcSWzrgTOPy0TCIRdJ+suWGnw4r8bmDeHabjtnYlbPv1dDX51Si1AV3w89\nWyHzpXEyux8TPW+3VfClh1o3CHv5habYqtmFfZn7FRiSOte0OpoEOikNs4W+rr6B\nC3GzszzvvPrphpjjuXI/j83ui1f6vgC5lCj7JTEp1PxwsdYoR3npYJzrWUozaP1H\nJuhXJe3DAgMBAAECggEADgTEjqEG5cwLphVAyqcEd0uBXDYvOSXfnAABR/1mgNNL\nU6LLdCAxmRz6XOMjbEhDw2J6908MV1Zi5lldQeIGsHqmkty97ydG2mEvC13YlGKY\nsPke1pvqt+V1NYqiAKmQKhog3VBpv4rdtvKKJfmiwWzor0PJo0igoSgNFqOpuiM/\noRUUVcxbIZ8p/P7kstgoEdqW8XY8wlRut3SC6CadhtS/u7l9ZPXNRLYap/OrCN0n\nsz0qsNgd+Qv90RYovxKu8XyoSigkaREmgfui+5LMoArG4v+d84HA2wuFYSvGVHUT\n7vErKNcBqEgZ/JNqGh0sI+DDQVf4qT2i0U11FLfhlQKBgQDnSFEb+aVxLyhA+L93\nXNLCwEtCFB9pKLNTu/ZfTRGwlZYHtSc2oEvNM84MrqzlDC/dq+aZ02EU8t5342k6\nBWI3mJ7noCFlcPoStLivxMf0c+yNRHdIr1QVmOSCCctr+wOydUBz1q5n3LPkJORH\nJdPPt+qTaVEb9cBMc2tw4fHn/wKBgQDFmHbfHAbmA0cxBESGxWEuUMHLPJJxCIUK\n+YkN7Y8EnVSEgQUUrlJgzQ63p9QkK2EmGWYD2twv0KC8PIL7NljxeK8KEuS+xdsX\n7on5Ni+k9oJPqUNL+GvPd4Ty3qYH5JkIjT6WOh5efV3d8HSo7I0ri9LAKEKgvNX6\neVYfOw5aPQKBgQDLSkho441lKEMkoMCC5Wcn4agE4/UcFLdTYYLUD8T9xu4Bxlw6\narlWHDP/98Vm6shj+wYNrbvGkxeyn4RNiI/lOFRsWdcg+CYHLSys6rWrC/4fyc9j\nZyDsfuBT4NIaDqAYS3GkoE3aYycH4Nl6JCjCivE4Mzkk72Tgjg8hQKjF9wKBgFSj\nQge/UZUkwlHUqiWwVjgoj1omz/Nq2tIgoPw+TYyEd7dqLGr3YIHmU++HC++SRUK0\njmYIUViJ3M/Ee7ZvSRnlv9Ro02KEDZzqqF7/PtlCXf8RWaoo9sUfROtjQ2sOGB75\noV1n96oxuQtf/Bh/eti0Q8nbdO609FMdti4adcNhAoGBAL7sjRjsARQWs+7iyK39\nvH3S6YCkY3pPWWgQP0IferrJZv5y3R6wvrDUiDvP2YzzALsypJlty03MK2MXwESe\nHnDeRXkQ4LIuz6FmjImsbIQBzjwBXQa55MI6RcqkOJIIeeqZfaTVhhJD3PEy0DUt\nkiNnbyBkq+N7ieyt3gFXQp0B\n-----END PRIVATE KEY-----\n",
+  "client_email": "piot-maps@appspot.gserviceaccount.com",
+  "client_id": "107102672606802871429",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/piot-maps%40appspot.gserviceaccount.com"
+}

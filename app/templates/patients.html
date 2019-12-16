@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container">
+
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="/">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Patients</li>
+    </ol>
+
+    <h1>Patient Registration</h1>
+    <hr>
+
+        <h3>Enter in your details below:</h3>
+        <form method="POST" action="">
+            {{form.csrf_token}}
+            <div class="col-xs-4">                
+                {{ wtf.form_field(form.first_name, label='First Name', class='form-control', placeholder='Enter Name') }}
+            </div>
+            <div class="col-xs-4">
+                {{ wtf.form_field(form.last_name, class='form-control', placeholder='Enter Name') }}
+            </div>
+            <br /><br /><br /><br /><br />
+            <div class="col-xs-4">
+                {{ wtf.form_field(form.email, class='form-control', placeholder='Enter Email') }}
+            </div>
+            <div class="col-xs-4">
+                {{ wtf.form_field(form.phone, class='form-control', placeholder='Enter Number') }}
+            </div>
+            <br /><br /><br /><br /><br />
+            <div>
+                {{ wtf.form_field(form.address, class='form-control', placeholder='Enter Address') }}
+            </div>
+            <br />
+            <div>
+            <input type=submit class='btn btn-warning btn-block' value="submit">
+            </div>
+        </form>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="/">Dashboard</a>
+    </li>
+    <li class="breadcrumb-item active">Home</li>
+</ol>
+
+<h1>Confirmation page</h1>
+<hr>
+
+<h3>Your have successfully created a new appointment with the following details</h3>
+<p>
+<strong>First name: </strong>{{appointment.first_name}}<br />
+<strong>Last Name: </strong>{{appointment.last_name}}<br />
+<strong>Email Address: </strong>{{appointment.email}}<br />
+<strong>Date: </strong>{{appointment.date}}<br />
+<strong>Time: </strong>{{appointment.time}}<br />
+<Strong>Doctor: </strong>{{appointment.select_doc}}<br />
+<strong>Appointment Details: </strong>{{appointment.time}}<br />
+</p>
+
+{% endblock %}

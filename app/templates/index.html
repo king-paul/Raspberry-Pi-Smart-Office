@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Home</li>
+        </ol>
+
+        <h1>Database Tables</h1>
+        <hr>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a data-toggle="tab" href="#patients" class="nav-link active">Patients</a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#doctors" class="nav-link active">Doctors</a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#appointments" class="nav-link active">Appointments</a>
+                </li>
+            </ul>
+
+        <div class="tab-content">
+            <div id="patients" class="tab-pane active fade in" role="tabpanel">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <!--<th>Patient ID </th>-->
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email Address</th>
+                                <th>Phone Number</th>
+                                <th>Home Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Flask code to display data from the patient table -->
+                          {% for patient in patients %}
+                              <tr>
+                                  <!--<td>{{patient.id}} </td>-->
+                                  <td>{{patient.first_name}}</td>
+                                  <td>{{patient.last_name}}</td>
+                                  <td>{{patient.email}}</td>
+                                  <td>{{patient.telephone}}</td>
+                                  <td>{{patient.address}}</td>
+                              </tr>
+                          {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="doctors" class="tab-pane fade in" role="tabpanel">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Sex</th>
+                                <th>Email Address</th>
+                                <th>Phone Number</th>
+                                <th>Office</th>
+                                <td>Buttons</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Flask code to display data from the patient table -->
+                            {% for doctor in doctors %}
+                                <tr>
+                                    <td>{{doctor.first_name}}</td>
+                                    <td>{{doctor.last_name}}</td>
+                                    <td>{{doctor.sex}}</td>
+                                    <td>{{doctor.email}}</td>
+                                    <td>{{doctor.phone}}</td>
+                                    <td>{{doctor.office}}</td>
+                                    <td></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="appointments" class="tab-pane fade in" role="tabpanel">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable3" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                          <!--  <th>Appointment ID </th> -->
+                                <th>Patient ID </th>
+                                <th>Doctor ID </th>
+                                <th>Date</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Flask code to display data from the appoitnment table -->
+                            {% for appointment in appointments %}
+                                <tr>
+                                  <!--  <td>{{appointment.id}}</td> -->
+                                    <td>{{appointment.patient_id}}</td>
+                                    <td>{{appointment.doctor_id}}</td>
+                                    <td>{{appointment.date}}</td>
+                                    <td>{{appointment.start_time}}</td>
+                                    <td>{{appointment.end_time}}</td>
+                                    <td>{{appointment.description}}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+    </div><!-- end of tabs -->
+
+</div> <!-- end of container -->
+
+{% endblock %}

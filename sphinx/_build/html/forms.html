@@ -1,0 +1,132 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Forms Module &#8212; Medical Appointment System (MAPS) 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Global Functions" href="globals.html" />
+    <link rel="prev" title="CRUD API" href="crud.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="globals.html" title="Global Functions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="crud.html" title="CRUD API"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Medical Appointment System (MAPS) 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="crud.html"
+                        title="previous chapter">CRUD API</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="globals.html"
+                        title="next chapter">Global Functions</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/forms.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="forms-module">
+<h1>Forms Module<a class="headerlink" href="#forms-module" title="Permalink to this headline">¶</a></h1>
+<p>This module contains classes used for Flask WTForms.</p>
+<span class="target" id="module-forms"></span><dl class="class">
+<dt id="forms.PatientForm">
+<em class="property">class </em><code class="descclassname">forms.</code><code class="descname">PatientForm</code><span class="sig-paren">(</span><em>formdata=&lt;object object&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forms.PatientForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a Flask WTF form used to create a patient registraion from and validate it.
+It is rendered on the patients.html page via the ‘/patients’ route.</p>
+<p>To use this class make a call to PatientForm()</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="forms.AppointmentForm">
+<em class="property">class </em><code class="descclassname">forms.</code><code class="descname">AppointmentForm</code><span class="sig-paren">(</span><em>formdata=&lt;object object&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forms.AppointmentForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a Flask WTF form used to create a appointment scheduling from and validate it.
+It is rendered on the patient.html page via the ‘/patients/&lt;id&gt;’ route.</p>
+<p>To use this class make a call to AppointmentForm()</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="forms.get_doctors">
+<code class="descclassname">forms.</code><code class="descname">get_doctors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#forms.get_doctors" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to make a call to the crud API to return all doctors. I then returns a dictionary containing the id and name of each one.
+This is intended for use with a dropdown combo box on a web form/</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="globals.html" title="Global Functions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="crud.html" title="CRUD API"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Medical Appointment System (MAPS) 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Paul King.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.1.
+    </div>
+  </body>
+</html>

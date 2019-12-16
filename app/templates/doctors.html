@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="/">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Doctors</li>
+    </ol>
+    
+    <h1>Doctors Page</h1>
+    <hr>
+    <div class="card mb-3" align="center">
+      <div class="card-header">
+        Doctor Appointments</div>
+        <div class="card-body">
+      <iframe src="https://calendar.google.com/calendar/embed?src=t8tlnde0s22pfr86am7hjgp69g%40group.calendar.google.com&ctz=Australia%2FHobart" style="border: 1" width="800" height="600" frameborder="1" scrolling="no"></iframe>
+    </div>
+  </div>
+  <!-- DataTables Example -->
+  <div class="card mb-3">
+            
+    <div class="card-header">
+              Patient Table</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                  
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Last Name</th>
+                      <th>Email</th>
+                      <th>Address</th>
+                      <th>Edit</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Name</th>
+                      <th>Last Name</th>
+                      <th>Email</th>
+                      <th>Address</th>
+                      <th>Edit</th>
+                    </tr>
+                  </tfoot>
+                  {% set count = 0 %}
+                  {% for item in patients %}
+                  <form method="GET" action="/notes/{{ item.first_name }}{{item.last_name}}">
+                    
+                  <tbody>
+                    <tr>
+                      
+                      <td>{{ item.first_name }}</td>
+                      <td>{{ item.last_name }}</td>
+                      <td>{{ item.email }}</td>
+                      <td>{{ item.address}}</td>
+                      <td><input type=submit class='btn btn-warning btn-block' value="notes"></td>
+                    </tr>
+                    <!--Sample tr entry to be updated from ptient db-->
+                  </tbody>
+                </form>
+                {% set count = count + 1 %}
+                {% endfor %}
+                </table>
+
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3">
+            
+    <div class="card-header">
+              Notes</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                  
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Notes</th>
+                      <th>Symptoms</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Name</th>
+                      <th>Notes</th>
+                      <th>Symptoms</th>
+                    </tr>
+                  </tfoot>
+                  {% set count = 0 %}
+                  {% for item in notes %}
+                    
+                  <tbody>
+                    <tr>
+                      
+                      <td>{{ patients[item.patient_id].first_name }} {{ patients[item.patient_id].last_name }}</td>
+                      <td>{{ item.notes }}</td>
+                      <td>{{ item.symptoms }}</td>
+                    </tr>
+                    <!--Sample tr entry to be updated from ptient db-->
+                  </tbody>
+                </form>
+                {% set count = count + 1 %}
+                {% endfor %}
+                </table>
+
+              </div>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div>
+{% endblock %}

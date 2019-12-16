@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Patient</li>
+        </ol>
+
+        <h1>Details for {{firstName}} {{lastName}}</h1>
+        <hr>
+        <h2>Appointments</h2>
+        <div class="table-responsive">
+            
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <col width="20%">
+                <col width="20%">
+                <col width="60%">
+                <tr>
+                    <th>Appointment Time</th>
+                    <th>Doctor Name</th>
+                    <th>Description</th>
+                </tr>
+                <!-- {% for appointment in appointments %}
+                <tr>
+                    <td>{{appointment.start_time}} to {{appointment.end_time}}</td>
+                    <td>{{appointment.doctor}}</td>
+                    <td>{{appointment.description}}</td>
+                </tr>
+                {% endfor %} -->
+            </table>
+            
+        </div>
+
+        <!-- Booking Section -->
+        <h2>Book new appointment</h2>
+        <div class="container"></div>
+            <form action="http://localhost:5000/appointment" method="POST">
+                {{form.csrf_token}}
+                <div class="form-group">
+                    {{ wtf.form_field(form.doctor, class='form-control') }}
+                    <!--label for="date-time">Select a time for the appoinment</label>
+                    <input id="date-time" type="datetime-local" placeholder="Enter a date and time"/-->
+                </div>
+                <div class="form-group">
+                    <!-- <iframe src="https://calendar.google.com/calendar/embed?src=hginc9bjcdf6ccegkfgi07i5hk%40group.calendar.google.com&ctz=Australia%2FMelbourne" 
+                    style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
+                    {{ wtf.form_field(form.doctor_id, class='form-control') }}
+                </div>
+                <div class="form-group">                   
+                    <!-- {{ wtf.form_field(form.start_time, class='form-control') }}
+                    {{ wtf.form_field(form.end_time, class='form-control') }} -->
+                    Date:<input type="date" class="form-control" id="date" >
+                    Start Time:<input type="time" class="form-control" id="form.start_time">
+                    End Time:<input type="time" class="form-control" id="form.end_time">
+                </div>
+                <div class="form-group">
+                    <p>Please describe your symptoms or other reason for your appoinment in the text area below</p>
+                    {{ wtf.form_field(form.description, class='form-control', placeholder='Enter description here') }}
+                    <!-- <textarea rows="4" cols="50"></textarea> -->
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success" value="create">Confirm Appointment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

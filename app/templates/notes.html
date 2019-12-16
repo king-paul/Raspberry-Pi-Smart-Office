@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+        <div class="container">
+          <div class="card card-login mx-auto mt-5">
+            <div class="card-body">
+                <div class="form-group">
+                  
+                  <div class="text-center">
+                <h3>{{ firstName }} {{ lastName }}</h3>
+                <form id="noteForm" method="POST" action= "" >
+                  {{ form.csrf_token }}
+                  <div class="form-label-group">
+                      notes
+                    </div>
+                    
+                    {{ form.note(cols="35", rows="5") }} 
+                    <div class="form-label-group">
+                    <p>Symptoms</p>
+                    </div>
+                    {{ form.symptoms(cols="35", rows="5") }} 
+                    {{ form.patient_id(value = id , type = "hidden") }}
+                    <div class="form-label-group">
+                    <input type="submit" value="Submit">
+                  </div>
+    
+                  </form>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+{% endblock %}    

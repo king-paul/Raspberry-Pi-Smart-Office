@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+    $("#datepicker").datepicker({
+      changeMonth: true,
+      dateFormat: 'dd-mm-yy',
+      minDate: 0,
+    });
+});
+
+   $("#event1").click(function(){
+	addEvent();
+    });
+
+function addEvent(){
+	const app_details = $("#app_details").val()
+	const firstname = $("#fname").val()
+	const lastname = $("#lname").val()
+	const email = $("#email").val()
+	const datetime = $("#datetime").val()
+	const end_date = $("#datetime").val() + 912000
+	const doctor = $("#docs").val()
+
+	fetch("/appointments", {
+			method: 'POST',
+			headers: {
+			  'Accept': 'application/json',
+			  'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				summary: app_details,
+				firstname: firstname,
+				lastname: lastname,
+				patientEmail: email,
+				datetime: datetime,
+				end_date: end_date,
+				doctorEmail: doctor })
+		})
+};
+</script> -->
+<div class="container">
+
+  <!-- Breadcrumbs-->
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="/">Dashboard</a>
+    </li>
+    <li class="breadcrumb-item active">Medical Clerks</li>
+  </ol>
+
+  <!-- Page Content -->
+  <h1>Medical Clerks</h1>
+  <hr>
+      <h3> Enter Appointment Details: </h3>
+      <form action="" method="POST">
+      	 {{form.csrf_token}}
+          <div class="cols-xs-4">
+          	  {{ wtf.form_field(form.first_name, label='First Name', class='form-control', placeholder='Enter First Name') }}
+          </div>
+          <div class="cols-xs-4">
+        		  {{ wtf.form_field(form.last_name, label='Last Name', class='form-control', placeholder='Enter Last Name') }}
+        	</div>
+          <div class="cols-xs-4">
+              {{ wtf.form_field(form.email, label='Email', class='form-control', placeholder='Enter Email') }}
+        	</div>
+          <div class="cols-xs-4">
+        		  {{ wtf.form_field(form.doctor, label='Doctor', class='form-control', placeholder='Select a Doctor') }}
+        	</div>
+        	<div class="cols-xs-4">
+        		  {{ wtf.form_field(form.date, class='form-control', label='Date') }}
+        <!-- <input class="datepicker" id="datetime" name="datetime" type="text" value=""> -->
+        	</div>
+        	<div class="cols-xs-4">
+        		  {{ wtf.form_field(form.start_time, label='Start Time', class='form-control') }}
+        	</div>
+          <div class="cols-xs-4">
+        		  {{ wtf.form_field(form.end_time, label='End Time', class='form-control') }}
+        	</div>
+          <div class="cols-xs-4">
+        		  {{ wtf.form_field(form.description, label='Appointment Details', class='form-control', placeholder='Enter Appointment Details') }}
+        	</div>
+        	<div>
+              <input type=submit id="submit" class='btn btn-warning btn-block' value="Submit">
+          </div>
+      </form>
+
+      <br /> <br /> <br />
+
+      <div id="appointments">
+          <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable3" width="100%" cellspacing="0">
+                  <thead>
+                      <tr>
+                    <!--  <th>Appointment ID </th> -->
+                          <th>Patient ID </th>
+                          <th>Doctor ID </th>
+                          <th>Date</th>
+                          <th>Start Time</th>
+                          <th>End Time</th>
+                          <th>Description</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <!-- Flask code to display data from the appoitnment table -->
+                      {% for appointment in appointments %}
+                          <tr>
+                            <!--  <td>{{appointment.id}}</td> -->
+                              <td>{{appointment.patient_id}}</td>
+                              <td>{{appointment.doctor_id}}</td>
+                              <td>{{appointment.date}}</td>
+                              <td>{{appointment.start_time}}</td>
+                              <td>{{appointment.end_time}}</td>
+                              <td>{{appointment.description}}</td>
+                          </tr>
+                      {% endfor %}
+                  </tbody>
+              </table>
+          </div>
+      </div>
+
+      <br /> <br /> <br />
+
+      <div id="divifm">
+         <iframe src="https://calendar.google.com/calendar/embed?src=t8tlnde0s22pfr86am7hjgp69g%40group.calendar.google.com&ctz=Australia%2FHobart" style="border: 0" width="600" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+</div>
+
+	<!-- <td> <input type="datetime-local" id="startTime" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}T[0-9]{2}:[0-9]{2}" min="12/10/2018" required></td>
+   <div id="event1" class="btn btn-primary" style="width:130px;"> Create Event </div>
+   <br><br>
+   <button id="btnDeleteEvents" class="btn btn-primary" onclick="deleteEvent();"> Delete Events </button>
+   <div id="event-response"> </div> -->
+
+
+
+
+{% endblock %}
